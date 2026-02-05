@@ -11,6 +11,7 @@ import ClientLogos from '@/components/sections/ClientLogos';
 import HowICanHelp from '@/components/sections/HowICanHelp';
 import Marquee from '@/components/sections/Marquee';
 import WhatWeBring from '@/components/sections/WhatWeBring';
+import Leadership from '@/components/sections/Leadership';
 
 import FAQ from '@/components/sections/FAQ';
 import CTASection from '@/components/sections/CTASection';
@@ -43,6 +44,7 @@ const Index = () => {
           <HowICanHelp />
           <Marquee />
           <WhatWeBring />
+          <Leadership />
 
           <FAQ />
           <CTASection />

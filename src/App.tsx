@@ -7,6 +7,8 @@ import { AnimatePresence } from "framer-motion";
 import Index from "./pages/Index";
 import Booking from "./pages/Booking";
 import Work from "./pages/Work";
+import Illustration from "./pages/Illustration";
+import Photography from "./pages/Photography";
 import NotFound from "./pages/NotFound";
 import PageTransition from "./components/layout/PageTransition";
 
@@ -39,6 +41,22 @@ const AnimatedRoutes = () => {
           element={
             <PageTransition>
               <Work />
+            </PageTransition>
+          }
+        />
+        <Route
+          path="/work/illustration"
+          element={
+            <PageTransition>
+              <Illustration />
+            </PageTransition>
+          }
+        />
+        <Route
+          path="/work/photography"
+          element={
+            <PageTransition>
+              <Photography />
             </PageTransition>
           }
         />

@@ -102,14 +102,19 @@ const Footer = () => {
         </div>
 
         {/* Bottom bar */}
-        <div className="mt-16 pt-8 border-t border-background/20 flex flex-col sm:flex-row justify-between items-center gap-4 text-sm text-background/60">
-          <p>© 2026 Maisha Umama. All rights reserved.</p>
-          <p>
-            Designed with ♥ by{' '}
-            <a href="#" className="text-background hover:underline">
-              Maisha Umama
-            </a>
+        <div className="mt-16 pt-8 border-t border-background/20 flex flex-col items-center gap-6 text-sm text-background/60">
+          <p className="text-xl font-serif italic text-background/90 tracking-wide">
+            Designer, Developer & Visual Creative
           </p>
+          <div className="flex flex-col sm:flex-row justify-between w-full items-center gap-4">
+            <p>© 2026 Maisha Osman Umama. All rights reserved.</p>
+            <p>
+              Designed with ♥ by{' '}
+              <a href="#" className="text-background hover:underline">
+                Maisha Osman Umama
+              </a>
+            </p>
+          </div>
         </div>
       </div>
     </footer>

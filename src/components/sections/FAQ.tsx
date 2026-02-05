@@ -23,6 +23,11 @@ const faqs = [
     answer:
       'Absolutely! I offer maintenance packages for websites and can provide ongoing brand support as needed. Many clients become long-term partners, and I love growing alongside the brands I help create.',
   },
+  {
+    question: 'Do you only work on digital design projects?',
+    answer:
+      'Not at all. I also create illustrations, sketches, and photography-based visual content depending on project needs.',
+  },
 ];
 
 const FAQ = () => {

@@ -14,6 +14,14 @@ const helpItems = [
     title: 'Branding Packages',
     description: 'From concept to completion, I\'ll help you build a cohesive brand identity.',
   },
+  {
+    title: 'Custom Illustrations & Visual Assets',
+    description: 'Designing unique artistic elements tailored to your brand\'s creative needs.',
+  },
+  {
+    title: 'Commercial & Brand Photography',
+    description: 'Professional visual storytelling for personal brands and small businesses.',
+  },
 ];
 
 const HowICanHelp = () => {
