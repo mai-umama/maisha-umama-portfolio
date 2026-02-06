@@ -12,7 +12,7 @@ const categories = [
 
 const Marquee = () => {
   return (
-    <section className="py-12 overflow-hidden bg-muted rounded-bento-lg mx-6">
+    <section className="py-12 overflow-hidden bg-primary/5 rounded-bento-lg mx-6 border border-primary/10">
       <div className="relative">
         <motion.div
           className="flex gap-8 whitespace-nowrap"

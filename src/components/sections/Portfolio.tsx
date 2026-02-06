@@ -61,11 +61,11 @@ const projects = [
 
 const Portfolio = () => {
   return (
-    <section className="py-20 px-6">
+    <section className="py-20 px-6 bg-background section-glow">
       <div className="container mx-auto">
-        <div className="text-center mb-24">
+        <div className="text-center mb-24 relative z-10">
           <motion.h2
-            className="font-serif text-5xl md:text-7xl mb-4"
+            className="font-serif text-5xl md:text-7xl mb-4 text-foreground"
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
@@ -74,7 +74,7 @@ const Portfolio = () => {
           </motion.h2>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-12 gap-6">
+        <div className="grid grid-cols-1 md:grid-cols-12 gap-8 relative z-10">
           {projects.map((project, index) => {
             const CardWrapper = project.isExternal ? 'a' : Link;
             const extraProps = project.isExternal
@@ -94,7 +94,7 @@ const Portfolio = () => {
               >
                 <CardWrapper
                   {...(extraProps as any)}
-                  className={`block relative rounded-[2.5rem] overflow-hidden cursor-pointer transition-all duration-500 h-[400px] md:h-[500px] ${isBoxed ? project.bgColor : 'bg-secondary/20'
+                  className={`block relative rounded-[2.5rem] overflow-hidden cursor-pointer transition-all duration-500 h-[400px] md:h-[500px] shadow-green hover:shadow-2xl ${isBoxed ? (project.bgColor || 'bg-secondary/30') : 'bg-secondary/20'
                     }`}
                 >
                   {/* Image Container */}
@@ -103,7 +103,7 @@ const Portfolio = () => {
                     <img
                       src={project.image}
                       alt={project.title}
-                      className={`w-full h-full object-cover transition-all duration-700 ${isBoxed ? 'rounded-2xl shadow-2xl' : ''
+                      className={`w-full h-full object-cover transition-all duration-700 ${isBoxed ? 'rounded-2xl shadow-green' : ''
                         }`}
                       style={{ objectPosition: (project as any).objectPosition || 'center' }}
                     />
@@ -111,10 +111,10 @@ const Portfolio = () => {
 
                   {/* Overlays */}
                   {!isBoxed && (
-                    <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent opacity-60 group-hover:opacity-80 transition-opacity duration-500" />
+                    <div className="absolute inset-0 bg-gradient-to-t from-dark/90 via-dark/30 to-transparent opacity-60 group-hover:opacity-80 transition-opacity duration-500" />
                   )}
                   {isBoxed && (
-                    <div className="absolute inset-0 bg-black/10 opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+                    <div className="absolute inset-0 bg-primary/5 opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
                   )}
 
                   {/* Content */}
@@ -127,7 +127,7 @@ const Portfolio = () => {
                         >
                           {project.title}
                         </motion.h3>
-                        <span className={`text-xs md:text-sm tracking-widest uppercase font-sans ${isBoxed ? 'text-muted-foreground' : 'text-white/70'
+                        <span className={`text-xs md:text-sm tracking-widest uppercase font-sans ${isBoxed ? 'text-foreground/60' : 'text-white/70'
                           }`}>
                           {project.category}
                         </span>
@@ -137,7 +137,7 @@ const Portfolio = () => {
                         <span className="text-sm font-medium transition-transform duration-300 translate-x-12 group-hover:translate-x-0">
                           View Project
                         </span>
-                        <div className={`h-[1px] transition-all duration-300 w-8 group-hover:w-16 ${isBoxed ? 'bg-foreground' : 'bg-white'
+                        <div className={`h-[1px] transition-all duration-300 w-8 group-hover:w-16 ${isBoxed ? 'bg-primary' : 'bg-primary'
                           }`} />
                       </div>
                     </div>

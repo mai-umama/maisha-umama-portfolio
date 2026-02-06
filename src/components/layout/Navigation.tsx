@@ -43,8 +43,8 @@ const Navigation = () => {
             >
                 <div className={cn(
                     "relative flex items-center justify-between md:grid md:grid-cols-3 px-6 py-3 rounded-full transition-all duration-300",
-                    "bg-white/80 backdrop-blur-md border border-white/20 shadow-sm dark:bg-black/80 dark:border-white/10",
-                    isScrolled ? "shadow-md bg-white/90 dark:bg-black/90" : ""
+                    "bg-background/80 backdrop-blur-md border border-primary/10 shadow-sm dark:bg-dark/80 dark:border-primary/5",
+                    isScrolled ? "shadow-green bg-background/90 dark:bg-dark/95" : ""
                 )}>
                     {/* Logo */}
                     <Link to="/" className="font-serif text-xl font-bold tracking-tight z-50 relative md:justify-self-start">

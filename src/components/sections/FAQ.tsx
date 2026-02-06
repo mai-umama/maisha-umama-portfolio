@@ -34,12 +34,12 @@ const FAQ = () => {
   const [openIndex, setOpenIndex] = useState<number | null>(null);
 
   return (
-    <section className="py-20 px-6">
-      <div className="container mx-auto max-w-3xl">
+    <section className="py-20 px-6 bg-background section-glow">
+      <div className="container mx-auto max-w-3xl relative z-10">
         {/* Section Header */}
         <div className="text-center mb-16">
           <motion.h2
-            className="font-serif text-4xl md:text-5xl italic"
+            className="font-serif text-4xl md:text-5xl italic text-foreground"
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
@@ -53,7 +53,7 @@ const FAQ = () => {
           {faqs.map((faq, index) => (
             <motion.div
               key={faq.question}
-              className="border-b border-border"
+              className="border-b border-primary/10"
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
@@ -63,10 +63,10 @@ const FAQ = () => {
                 className="w-full py-6 flex items-center justify-between text-left group"
                 onClick={() => setOpenIndex(openIndex === index ? null : index)}
               >
-                <span className="font-medium text-lg group-hover:text-muted-foreground transition-colors">
+                <span className="font-medium text-lg text-foreground group-hover:text-primary transition-colors">
                   {faq.question}
                 </span>
-                <span className="flex-shrink-0 ml-4">
+                <span className="flex-shrink-0 ml-4 text-primary">
                   {openIndex === index ? (
                     <Minus className="w-5 h-5" />
                   ) : (
@@ -83,7 +83,7 @@ const FAQ = () => {
                     transition={{ duration: 0.3, ease: 'easeInOut' }}
                     className="overflow-hidden"
                   >
-                    <p className="pb-6 text-muted-foreground leading-relaxed">
+                    <p className="pb-6 text-foreground/60 leading-relaxed">
                       {faq.answer}
                     </p>
                   </motion.div>

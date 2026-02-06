@@ -18,7 +18,7 @@ const Footer = () => {
   ];
 
   return (
-    <footer className="bg-foreground text-background rounded-t-[3rem] mt-20">
+    <footer className="bg-dark text-primary-foreground rounded-t-[3rem] mt-20">
       <div className="container mx-auto px-6 py-16 lg:py-24">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20">
           {/* Left Section - Photo & CTA */}
@@ -30,7 +30,7 @@ const Footer = () => {
             className="flex flex-col sm:flex-row gap-8 items-center sm:items-start"
           >
             {/* Footer Portrait */}
-            <div className="w-32 h-32 sm:w-40 sm:h-40 shrink-0 rounded-full overflow-hidden border-2 border-background/20">
+            <div className="w-32 h-32 sm:w-40 sm:h-40 shrink-0 rounded-full overflow-hidden border-2 border-primary/20">
               <img
                 src={footerPortrait}
                 alt="Maisha Umama"
@@ -47,7 +47,7 @@ const Footer = () => {
               <Link to="/booking">
                 <Button
                   variant="outline"
-                  className="rounded-full px-8 py-6 text-foreground bg-background border-background hover:bg-transparent hover:text-background transition-all"
+                  className="rounded-full px-8 py-6 text-dark bg-background border-background hover:bg-transparent hover:text-background transition-all"
                 >
                   Get in Touch
                 </Button>
@@ -70,7 +70,7 @@ const Footer = () => {
                   <li key={link.name}>
                     <a
                       href={link.href}
-                      className="text-background/70 hover:text-background transition-colors"
+                      className="text-primary-foreground/70 hover:text-primary-foreground transition-colors"
                     >
                       {link.name}
                     </a>
@@ -82,17 +82,17 @@ const Footer = () => {
               <h3 className="font-serif text-xl mb-6">Connect</h3>
               <ul className="space-y-3">
                 <li>
-                  <a href="mailto:umamau418@gmail.com" className="text-background/70 hover:text-background transition-colors">
+                  <a href="mailto:umamau418@gmail.com" className="text-primary-foreground/70 hover:text-primary-foreground transition-colors">
                     Email
                   </a>
                 </li>
                 <li>
-                  <a href="#" className="text-background/70 hover:text-background transition-colors">
+                  <a href="#" className="text-primary-foreground/70 hover:text-primary-foreground transition-colors">
                     Maisha Osman Umama (Facebook)
                   </a>
                 </li>
                 <li>
-                  <a href="#" className="text-background/70 hover:text-background transition-colors">
+                  <a href="#" className="text-primary-foreground/70 hover:text-primary-foreground transition-colors">
                     Instagram
                   </a>
                 </li>
@@ -102,15 +102,15 @@ const Footer = () => {
         </div>
 
         {/* Bottom bar */}
-        <div className="mt-16 pt-8 border-t border-background/20 flex flex-col items-center gap-6 text-sm text-background/60">
-          <p className="text-xl font-serif italic text-background/90 tracking-wide">
+        <div className="mt-16 pt-8 border-t border-primary-foreground/10 flex flex-col items-center gap-6 text-sm text-primary-foreground/60">
+          <p className="text-xl font-serif italic text-primary-foreground/90 tracking-wide">
             Designer, Developer & Visual Creative
           </p>
           <div className="flex flex-col sm:flex-row justify-between w-full items-center gap-4">
             <p>© 2026 Maisha Osman Umama. All rights reserved.</p>
             <p>
               Designed with ♥ by{' '}
-              <a href="#" className="text-background hover:underline">
+              <a href="#" className="text-primary-foreground hover:underline">
                 Maisha Osman Umama
               </a>
             </p>

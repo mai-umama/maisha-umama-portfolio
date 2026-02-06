@@ -4,16 +4,16 @@ import { Button } from '@/components/ui/button';
 
 const CTASection = () => {
   return (
-    <section className="py-20 px-6">
-      <div className="container mx-auto">
+    <section className="py-20 px-6 bg-background section-glow">
+      <div className="container mx-auto relative z-10">
         <motion.div
-          className="bg-card rounded-bento-lg p-12 md:p-20 text-center"
+          className="bg-card rounded-bento-lg p-12 md:p-20 text-center shadow-green border border-primary/10"
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
         >
           <motion.h2
-            className="font-serif text-3xl md:text-4xl lg:text-5xl mb-4"
+            className="font-serif text-3xl md:text-4xl lg:text-5xl mb-4 text-foreground"
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
@@ -22,7 +22,7 @@ const CTASection = () => {
             Not sure where to start?
           </motion.h2>
           <motion.p
-            className="text-muted-foreground mb-8 max-w-md mx-auto"
+            className="text-foreground/60 mb-8 max-w-md mx-auto"
             initial={{ opacity: 0 }}
             whileInView={{ opacity: 1 }}
             viewport={{ once: true }}
@@ -37,7 +37,7 @@ const CTASection = () => {
             transition={{ delay: 0.3 }}
           >
             <Link to="/booking">
-              <Button className="rounded-full px-8 py-6 bg-foreground text-background hover:bg-foreground/90">
+              <Button className="rounded-full px-10 py-7 bg-primary text-primary-foreground hover:bg-primary/90 transition-all shadow-green">
                 Book a Free Call
               </Button>
             </Link>

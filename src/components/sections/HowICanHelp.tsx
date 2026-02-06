@@ -26,8 +26,8 @@ const helpItems = [
 
 const HowICanHelp = () => {
   return (
-    <section className="py-20 px-6">
-      <div className="container mx-auto">
+    <section className="py-20 px-6 bg-background section-glow">
+      <div className="container mx-auto relative z-10">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20">
           {/* Left Content */}
           <motion.div
@@ -36,7 +36,7 @@ const HowICanHelp = () => {
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
           >
-            <h2 className="font-serif text-4xl md:text-5xl">
+            <h2 className="font-serif text-4xl md:text-5xl text-foreground">
               How I can help you...
             </h2>
 
@@ -50,8 +50,8 @@ const HowICanHelp = () => {
                   viewport={{ once: true }}
                   transition={{ delay: index * 0.1 }}
                 >
-                  <h3 className="font-medium">{item.title}</h3>
-                  <p className="text-muted-foreground text-sm">
+                  <h3 className="font-medium text-foreground">{item.title}</h3>
+                  <p className="text-foreground/60 text-sm">
                     {item.description}
                   </p>
                 </motion.div>
@@ -67,11 +67,11 @@ const HowICanHelp = () => {
             viewport={{ once: true }}
             transition={{ delay: 0.2 }}
           >
-            <div className="aspect-[4/3] rounded-bento-lg overflow-hidden">
+            <div className="aspect-[4/3] rounded-bento-lg overflow-hidden shadow-green border border-primary/10">
               <img
                 src={workspaceImage}
                 alt="Creative workspace"
-                className="w-full h-full object-cover"
+                className="w-full h-full object-cover transition-transform duration-700 hover:scale-105"
               />
             </div>
           </motion.div>

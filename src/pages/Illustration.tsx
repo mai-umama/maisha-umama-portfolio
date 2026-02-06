@@ -28,8 +28,8 @@ const Illustration = () => {
     return (
         <>
             <Navigation />
-            <main className="min-h-screen pt-32 pb-20">
-                <div className="container mx-auto px-6">
+            <main className="min-h-screen pt-32 pb-20 bg-background section-glow">
+                <div className="container mx-auto px-6 relative z-10">
                     <motion.div
                         className="text-center mb-16"
                         initial={{ opacity: 0, y: 20 }}
@@ -37,16 +37,16 @@ const Illustration = () => {
                         transition={{ duration: 0.6 }}
                     >
                         <h1 className="font-serif text-5xl md:text-6xl mb-4 text-foreground">Illustration & Sketch Art</h1>
-                        <p className="text-muted-foreground text-lg max-w-2xl mx-auto">
+                        <p className="text-foreground/60 text-lg max-w-2xl mx-auto">
                             Hand-drawn and digital visual artwork designed to bring an artistic and professional touch to branding and creative concepts.
                         </p>
                     </motion.div>
 
-                    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
                         {illustrations.map((item, index) => (
                             <motion.div
                                 key={item.id}
-                                className="rounded-2xl overflow-hidden aspect-[4/5] bg-secondary/20 group"
+                                className="rounded-2xl overflow-hidden aspect-[4/5] bg-card group shadow-green hover:shadow-2xl border border-primary/5"
                                 initial={{ opacity: 0, y: 20 }}
                                 whileInView={{ opacity: 1, y: 0 }}
                                 viewport={{ once: true }}

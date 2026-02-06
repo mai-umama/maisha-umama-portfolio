@@ -9,10 +9,10 @@ const clients = [
 
 const ClientLogos = () => {
   return (
-    <section className="py-16 px-6 border-y border-border">
+    <section className="py-16 px-6 border-y border-primary/10 bg-background">
       <div className="container mx-auto">
         <motion.p
-          className="text-center text-sm text-muted-foreground mb-10 uppercase tracking-widest"
+          className="text-center text-sm text-primary/60 mb-10 uppercase tracking-widest"
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}
           viewport={{ once: true }}
