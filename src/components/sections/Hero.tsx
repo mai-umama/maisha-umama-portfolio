@@ -32,7 +32,7 @@ const Hero = () => {
 
                         <div className="space-y-5 text-foreground/80 text-lg leading-relaxed max-w-xl font-sans font-light">
                             <p>
-                                I am a CSE student studied at Mymensingh Engineering College.
+                                I am a CSE student studying at Mymensingh Engineering College.
                             </p>
                             <p>
                                 I know <span className="text-foreground font-semibold">Python</span> and <span className="text-foreground font-semibold">C language</span>, and have a basic knowledge on <span className="text-foreground font-semibold">Blender</span> and <span className="text-foreground font-semibold">OpenCV</span> library of Python.
